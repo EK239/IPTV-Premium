@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>IPTV Pro</title>
+<title>IPTV-Premium</title>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
 <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet"/>
 <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
@@ -128,9 +128,10 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);over
 .qa-ico{font-size:20px}.qa-label{font-size:13px;font-weight:700}.qa-sub{font-size:11px;color:var(–text2)}
 
 /* ══ VIEW: VERBINDEN ══ */
-#v-connect{padding:28px 28px;gap:20px;max-width:580px}
-.type-row{display:flex;gap:7px;flex-wrap:wrap}
-.type-btn{padding:7px 15px;border-radius:var(–r-sm);border:1px solid var(–border);background:transparent;color:var(–text2);font-family:‘Outfit’,sans-serif;font-size:12px;font-weight:600;cursor:pointer;transition:all var(–t)}
+#v-connect{padding:20px;gap:16px;max-width:580px}
+.type-row{display:flex;gap:7px;flex-wrap:nowrap;overflow-x:auto}
+.type-row::-webkit-scrollbar{height:0}
+.type-btn{padding:7px 13px;border-radius:var(–r-sm);border:1px solid var(–border);background:transparent;color:var(–text2);font-family:‘Outfit’,sans-serif;font-size:12px;font-weight:600;cursor:pointer;transition:all var(–t);white-space:nowrap;flex-shrink:0}
 .type-btn.active{background:var(–a);color:#000;border-color:var(–a)}
 .type-btn:not(.active):hover{border-color:var(–border2);color:var(–text)}
 .form-card{background:var(–s1);border:1px solid var(–border);border-radius:var(–r-lg);padding:26px}
@@ -143,12 +144,12 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);over
 .field input::placeholder{color:var(–text3)}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .hr{height:1px;background:var(–border)}
-.btn-connect{width:100%;padding:12px;border-radius:var(–r-sm);border:none;font-family:‘Outfit’,sans-serif;font-size:14px;font-weight:700;cursor:pointer;transition:all var(–t)}
-.btn-connect.cyan{background:linear-gradient(135deg,var(–a),#0099cc);color:#000;box-shadow:0 4px 18px rgba(0,207,255,.25)}
+.btn-connect{width:100%;padding:12px;border-radius:var(–r-sm);border:none;font-family:‘Outfit’,sans-serif;font-size:14px;font-weight:700;cursor:pointer;transition:all var(–t);-webkit-appearance:none}
+.btn-connect.cyan{background:linear-gradient(135deg,var(–a),#0099cc)!important;color:#000!important;box-shadow:0 4px 18px rgba(0,207,255,.25)}
 .btn-connect.cyan:hover{box-shadow:0 6px 26px rgba(0,207,255,.4);transform:translateY(-1px)}
-.btn-connect.red{background:linear-gradient(135deg,var(–a2),#cc2244);color:#fff;box-shadow:0 4px 18px rgba(255,79,109,.25)}
+.btn-connect.red{background:linear-gradient(135deg,var(–a2),#cc2244)!important;color:#fff!important;box-shadow:0 4px 18px rgba(255,79,109,.25)}
 .btn-connect.red:hover{box-shadow:0 6px 26px rgba(255,79,109,.4);transform:translateY(-1px)}
-.btn-connect.green{background:linear-gradient(135deg,var(–a3),#00cc66);color:#000;box-shadow:0 4px 18px rgba(61,255,154,.25)}
+.btn-connect.green{background:linear-gradient(135deg,var(–a3),#00cc66)!important;color:#000!important;box-shadow:0 4px 18px rgba(61,255,154,.25)}
 .btn-connect.green:hover{box-shadow:0 6px 26px rgba(61,255,154,.4);transform:translateY(-1px)}
 .btn-connect:disabled{opacity:.5;cursor:not-allowed;transform:none!important}
 .log-box{background:var(–bg);border:1px solid var(–border);border-radius:var(–r-sm);padding:10px;overflow-y:auto;display:flex;flex-direction:column;gap:2px;font-family:‘DM Mono’,monospace;font-size:11px;height:85px}
@@ -354,7 +355,7 @@ input[type=range].vol::-webkit-slider-thumb{-webkit-appearance:none;width:12px;h
     <div class="nav-top">
       <div class="logo">
         <div class="logo-icon">📡</div>
-        <div class="logo-text">IPTV Pro</div>
+        <div class="logo-text">IPTV-Premium</div>
       </div>
       <button class="collapse-btn" onclick="toggleNav()" id="collapseBtn">◀</button>
     </div>
@@ -386,7 +387,7 @@ input[type=range].vol::-webkit-slider-thumb{-webkit-appearance:none;width:12px;h
     <div class="topbar">
       <div>
         <div class="topbar-title" id="topTitle">Übersicht</div>
-        <div class="topbar-sub" id="topSub">IPTV Pro Dashboard</div>
+        <div class="topbar-sub" id="topSub">IPTV-Premium Dashboard</div>
       </div>
       <div class="topbar-right">
         <button class="icon-btn" onclick="toggleTheme()" id="themeBtn" title="Theme">🌙</button>
@@ -399,7 +400,7 @@ input[type=range].vol::-webkit-slider-thumb{-webkit-appearance:none;width:12px;h
   <div class="home-orbs"><div class="orb orb1"></div><div class="orb orb2"></div></div>
   <div class="home-hero">
     <div class="hero-eyebrow">Dashboard</div>
-    <h1 class="hero-title">Willkommen,<br><span>IPTV Pro.</span></h1>
+    <h1 class="hero-title">Willkommen,<br><span>IPTV-Premium.</span></h1>
     <p class="hero-sub">Verbinde dich mit einem Server oder wähle einen gespeicherten Server aus.</p>
   </div>
   <div class="home-sec-title">📊 Status</div>
@@ -557,7 +558,7 @@ input[type=range].vol::-webkit-slider-thumb{-webkit-appearance:none;width:12px;h
   </div>
   <div class="settings-card">
     <div class="settings-title">ℹ️ App Info</div>
-    <div class="info-row"><span class="info-label">Version</span><span class="info-val">2.0.0</span></div>
+    <div class="info-row"><span class="info-label">Version</span><span class="info-val">IPTV-Premium 2.0</span></div>
     <div class="info-row"><span class="info-label">Player</span><span class="info-val">Video.js 8 + HLS</span></div>
     <div class="info-row"><span class="info-label">Protokolle</span><span class="info-val">M3U · Xtream · Stalker</span></div>
   </div>
@@ -599,7 +600,7 @@ let favorites = JSON.parse(localStorage.getItem('iptv_favs') || '[]');
 let savedServers = JSON.parse(localStorage.getItem('iptv_servers') || '[]');
 
 const VIEW_META = {
-  home:     {title:'Übersicht',    sub:'IPTV Pro Dashboard'},
+  home:     {title:'Übersicht',    sub:'IPTV-Premium Dashboard'},
   connect:  {title:'Verbinden',    sub:'Neuen Server verbinden'},
   servers:  {title:'Server',       sub:'Gespeicherte Verbindungen'},
   channels: {title:'Kanäle',      sub:'Alle verfügbaren Kanäle'},
